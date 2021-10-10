@@ -39,7 +39,15 @@ public class Megabot : MonoBehaviour
 
     void LateUpdate()
     {
-        CheckWhereToFace();    
+        if(dirX > 0 && !facingRight) //If input is right, but character is facing left, flip.
+        { 
+           Flip();
+        }
+
+        if(dirX < 0 && facingRight) //If input is left, but character is facing right, flip.
+        {
+            Flip();
+        }
     }
 
     void SetAnimationState()
@@ -79,16 +87,18 @@ public class Megabot : MonoBehaviour
 
     }
 
-    void CheckWhereToFace()
+    void Flip()
     {
+        transform.Rotate(0f, 180f, 0f);
+
         if (dirX > 0)
             facingRight = true;
         else if (dirX < 0)
             facingRight = false;
 
-        if(((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
-            localScale.x *= -1;
-
-        transform.localScale = localScale;
+        //if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
+        //localScale.x *= -1;
+     
+        //transform.localScale = localScale;
     }
 }
