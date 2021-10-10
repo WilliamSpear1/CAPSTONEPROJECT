@@ -7,7 +7,9 @@ public class Megabot : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     float dirX, moveSpeed = 1.5f;
+    float firing, fireRate = 1f;
     bool facingRight = true;
+
     Vector3 localScale;
 
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class Megabot : MonoBehaviour
         SetAnimationState();
 
         dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        firing = Input.GetAxisRaw("Fire1") * fireRate;
     }
 
     void FixedUpdate()
@@ -42,16 +45,38 @@ public class Megabot : MonoBehaviour
     void SetAnimationState()
     {
         if(dirX == 0)
+        {
             anim.SetBool("isWalking", false);
+            anim.SetBool("isWalkShooting", false);
 
-        if(rb.velocity.y == 0)
+            if (Mathf.Abs(firing) == 1)
+                anim.SetBool("isIdleShooting", true);
+            else
+                anim.SetBool("isIdleShooting", false);
+        }
+
+        if (rb.velocity.y == 0)
             anim.SetBool("isJumping", false);
 
         if (Mathf.Abs(dirX) == 1.5 && rb.velocity.y == 0)
-            anim.SetBool("isWalking", true);
+        {
+            anim.SetBool("isIdleShooting", false);
+
+            if (Mathf.Abs(firing) == 1)
+            {
+                anim.SetBool("isWalking", false);
+                anim.SetBool("isWalkShooting", true);
+            }
+            else
+            {
+                anim.SetBool("isWalking", true);
+                anim.SetBool("isWalkShooting", false);
+            }
+        }
 
         if (rb.velocity.y > 0)
             anim.SetBool("isJumping", true);
+
     }
 
     void CheckWhereToFace()
