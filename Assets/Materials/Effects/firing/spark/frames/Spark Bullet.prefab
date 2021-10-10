@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 955853369312605575}
   m_Layer: 0
   m_Name: Spark Bullet
-  m_TagString: Untagged
+  m_TagString: Spark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
