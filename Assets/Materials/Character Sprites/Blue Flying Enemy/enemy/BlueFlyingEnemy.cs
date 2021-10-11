@@ -32,7 +32,8 @@ public class BlueFlyingEnemy : MonoBehaviour
         {
             ChasePlayer();
         }
-        else {
+        else 
+        {
             StopChasingPlayer();
         }
     }
