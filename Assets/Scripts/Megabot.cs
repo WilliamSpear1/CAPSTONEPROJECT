@@ -9,6 +9,7 @@ public class Megabot : MonoBehaviour
     float dirX, moveSpeed = 1.5f;
     float firing, fireRate = 1f;
     bool facingRight = true;
+    public float health = 100;
 
     Vector3 localScale;
 
@@ -101,4 +102,15 @@ public class Megabot : MonoBehaviour
      
         //transform.localScale = localScale;
     }
+
+       void OnTriggerEnter2D(Collider2D collider){
+            if (collider.gameObject.name.Substring(0,17) == "Blue Flying Enemy"){ //checks the name of the object that hits the character
+                   health -= 20;
+                  // Debug.Log(health);
+                
+       
+            }
+        } 
+
+        
 }
