@@ -10,6 +10,8 @@ public class Megabot : MonoBehaviour
     float firing, fireRate = 1f;
     bool facingRight = true;
     public float health = 100;
+    bool isHit = false;
+    float timer = 10;
 
     Vector3 localScale;
 
@@ -31,6 +33,8 @@ public class Megabot : MonoBehaviour
 
         dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
         firing = Input.GetAxisRaw("Fire1") * fireRate;
+
+        healthGen();
     }
 
     void FixedUpdate()
@@ -106,11 +110,38 @@ public class Megabot : MonoBehaviour
        void OnTriggerEnter2D(Collider2D collider){
             if (collider.gameObject.name.Substring(0,17) == "Blue Flying Enemy"){ //checks the name of the object that hits the character
                    health -= 20;
+                   isHit = true;
                   // Debug.Log(health);
                 
        
             }
-        } 
+        }
+
+        void healthGen(){
+            if (health < 100 && health > 0){ //if player is still alive but not at max health
+                if ( isHit == true){ //if player gets hit, resets timer countdowon for regeneration of health
+                    timer = 10;
+                    isHit = false;
+                }
+                else {
+                    if (timer >= 0){
+                        timer -= Time.deltaTime; //counts down from whatever timer is set at
+                    }
+                    else{
+                        if (health + 2 > 100){ //if health goes over max, player has max health
+                            health = 100;
+                        }
+                        else {
+                            timer = 1;
+                            health += 2; //adds two points to players health after every 1 second
+                        }
+                    }
+                }
+               // Debug.Log(timer);
+               // Debug.Log(health);
+            }
+            
+        }
 
         
 }
