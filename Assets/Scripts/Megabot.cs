@@ -107,7 +107,7 @@ public class Megabot : MonoBehaviour
         //transform.localScale = localScale;
     }
 
-       void OnTriggerEnter2D(Collider2D collider){
+       /*void OnTriggerEnter2D(Collider2D collider){
             if (collider.gameObject.name.Substring(0,17) == "Blue Flying Enemy"){ //checks the name of the object that hits the character
                    health -= 20;
                    isHit = true;
@@ -115,6 +115,9 @@ public class Megabot : MonoBehaviour
                 
        
             }
+        }*/
+        void TakeHit() { 
+    
         }
 
         void healthGen(){
