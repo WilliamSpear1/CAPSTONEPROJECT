@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 664766d22d7bdac47a439aafbc4ee6ca
+guid: 7d00f5ea66d90d24db49909379e24ff6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -576225515635537536
-    second: breath-fire_0
+      213: -446198063759132195
+    second: hell-beast-idle_0
   - first:
-      213: 4643743792949958635
-    second: breath-fire_1
+      213: 1235243342741060904
+    second: hell-beast-idle_1
   - first:
-      213: 2415644211309952893
-    second: breath-fire_2
+      213: 6008631576532437361
+    second: hell-beast-idle_2
   - first:
-      213: -5957138932976025449
-    second: breath-fire_3
+      213: 5792058939128127358
+    second: hell-beast-idle_3
   - first:
-      213: -1728029377456865803
-    second: breath-fire_4
+      213: 4185659681491201354
+    second: hell-beast-idle_4
+  - first:
+      213: -3981304751274544797
+    second: hell-beast-idle_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: breath-fire_0
+      name: hell-beast-idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 96
+        width: 55
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 089070e42f5d008f0800000000000000
-      internalID: -576225515635537536
+      spriteID: dd97b2e9939cec9f0800000000000000
+      internalID: -446198063759132195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: breath-fire_1
+      name: hell-beast-idle_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 55
         y: 0
-        width: 160
-        height: 96
+        width: 55
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be715b64064e17040800000000000000
-      internalID: 4643743792949958635
+      spriteID: 82d3f3f8647742110800000000000000
+      internalID: 1235243342741060904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: breath-fire_2
+      name: hell-beast-idle_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 110
         y: 0
-        width: 160
-        height: 96
+        width: 55
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7fbbde8c97168120800000000000000
-      internalID: 2415644211309952893
+      spriteID: 17949617592f26350800000000000000
+      internalID: 6008631576532437361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: breath-fire_3
+      name: hell-beast-idle_3
       rect:
         serializedVersion: 2
-        x: 480
+        x: 165
         y: 0
-        width: 160
-        height: 96
+        width: 55
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7908056e3bdf35da0800000000000000
-      internalID: -5957138932976025449
+      spriteID: e7f9bd0eae6816050800000000000000
+      internalID: 5792058939128127358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: breath-fire_4
+      name: hell-beast-idle_4
       rect:
         serializedVersion: 2
-        x: 640
+        x: 220
         y: 0
-        width: 160
-        height: 96
+        width: 55
+        height: 67
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +207,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fd7e3bcf6ec408e0800000000000000
-      internalID: -1728029377456865803
+      spriteID: a4d25f1cd43761a30800000000000000
+      internalID: 4185659681491201354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hell-beast-idle_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 55
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361b4bd2c609fb8c0800000000000000
+      internalID: -3981304751274544797
       vertices: []
       indices: 
       edges: []

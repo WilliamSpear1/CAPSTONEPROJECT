@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyingDemon : MonoBehaviour,ICollsionHandler
+public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
 {
     [SerializeField]
     private Animator animator;
@@ -16,6 +16,7 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler
 
     private Transform target;
     private bool canAttack = true;
+
     [SerializeField]
     private float coolDown;
     private float timeSinceLastAttack;
@@ -23,17 +24,20 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler
     public Rigidbody2D rb;
 
     [SerializeField]
-    private float speed = 1.3f;
+    private float speed = 0.17f;
 
     [SerializeField]
     private Vector3[] positions;
 
     private int index;
+    private int health = 100;
 
     private void Update()
     {
         Attack();
+        LookAtTarget();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
         if (canAttack)
         {
             transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.fixedDeltaTime * speed);
@@ -62,7 +66,7 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler
             canAttack = true;
         }
 
-        if (canAttack && target != null && Mathf.Abs(target.transform.position.y - transform.position.y) <= 1f) {
+        if (canAttack && target != null && Mathf.Abs(target.transform.position.y - transform.position.y) <= .1f){
             canAttack = false;
             timeSinceLastAttack = 0;
             animator.SetBool("Attack", true);
@@ -71,18 +75,19 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler
     public void StopShooting() {
         animator.SetBool("Attack", false);
     }
+
     public void Shoot() {
-        GameObject go = Instantiate(fireBreathPrefab, mouth.position, Quaternion.identity);
-
-        Vector3 direction = new Vector3(transform.localScale.x,0);
-        Destroy(go, 1);
-
+            GameObject go = Instantiate(fireBreathPrefab, mouth.position, Quaternion.identity);
+            Vector3 direction = new Vector3(transform.localScale.x, 0);
+            go.GetComponent<FireBall>().Setup(direction);
+            Destroy(go, 1);
     }
+
     private void LookAtTarget() {
         if (target != null) {
             Vector3 scale = transform.localScale;
-            scale.x = target.transform.position.x < transform.position.x ? -1 : 1;
-            transform.localScale = scale;
+            scale.x = target.transform.position.x < transform.position.x ? 1 : -1;
+            transform.localScale = scale; 
         }
     }
     public void CollisionEnter(string colliderName, GameObject other)
@@ -92,6 +97,10 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler
                 this.target = other.transform;
             }
         }
+        if (colliderName == "Fire" && other.tag == "Player") {
+            Debug.Log("inside if statment");
+            other.GetComponent<Megabot>().TakeHit();
+        }
     }
 
     public void CollisionExit(string colliderName, GameObject other)
@@ -100,5 +109,14 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler
         {
             target = null;
         }
+    }
+
+    public void TakeHit()
+    {
+            health -= 50;
+
+
+        if (health == 0)
+            animator.SetBool("Dead", true);
     }
 }

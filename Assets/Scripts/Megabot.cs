@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Megabot : MonoBehaviour
+public class Megabot : MonoBehaviour,IHit
 {
     Rigidbody2D rb;
     Animator anim;
@@ -116,8 +116,14 @@ public class Megabot : MonoBehaviour
        
             }
         }*/
-        void TakeHit() { 
-    
+        public void TakeHit()
+        {
+            Debug.Log("hit");
+            health -= 50;
+
+
+            if (health == 0)
+                Debug.Log("death");
         }
 
         void healthGen(){
@@ -145,6 +151,4 @@ public class Megabot : MonoBehaviour
             }
             
         }
-
-        
 }

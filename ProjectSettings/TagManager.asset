@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sight
+  - Spark
+  - Enemy
+  - Hero
+  - Fire
+  - FireBall
   layers:
   - Default
   - TransparentFX
@@ -13,9 +18,9 @@ TagManager:
   - Water
   - UI
   - 
+  - Hit
   - 
-  - 
-  - 
+  - HeroHit
   - 
   - 
   - 
