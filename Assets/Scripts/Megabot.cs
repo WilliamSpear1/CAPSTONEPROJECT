@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Megabot : MonoBehaviour
+public class Megabot : MonoBehaviour,IHit
 {
     Rigidbody2D rb;
     Animator anim;
     float dirX, moveSpeed = 1.5f;
     float firing, fireRate = 1f;
     bool facingRight = true;
-    public float health = 100;
     bool isHit = false;
     float timer = 10;
-    GameObject hBar;
+    
 
-
+    GameObject hbar;
     Vector3 localScale;
+
+    [SerializeField]
+    public float health = 100;
+
+    public static int newhealth = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -109,48 +113,56 @@ public class Megabot : MonoBehaviour
         //transform.localScale = localScale;
     }
 
-       void OnTriggerEnter2D(Collider2D collider){
-           //Debug.Log(collider);
-            if (collider.gameObject.name.Substring(0,17) == "Blue Flying Enemy"){ //checks the name of the object that hits the character
-                   health -= 20;
-                   isHit = true;
-                   
-                 //Debug.Log(health);
+    /*void OnTriggerEnter2D(Collider2D collider){
+        if (collider.gameObject.name.Substring(0,17) == "Blue Flying Enemy"){ //checks the name of the object that hits the character
+                health -= 20;
+                isHit = true;
+                // Debug.Log(health);
                 
        
-            }
-          
+        }
+    }*/
+
+    public void TakeHit()
+    {
+        Debug.Log("hit");
+        if (health > 0 && newhealth > 0)
+        {
+            health -= 10;
+            newhealth -= 10;
+
         }
 
-        void healthGen(){
-            if (health < 100 && health > 0){ //if player is still alive but not at max health
-                if ( isHit == true){ //if player gets hit, resets timer countdowon for regeneration of health
-                    timer = 10;
-                    isHit = false;
-                }
-                else {
-                    if (timer >= 0){
-                        timer -= Time.deltaTime; //counts down from whatever timer is set at
-                    }
-                    else{
-                        if (health + 2 > 100){ //if health goes over max, player has max health
-                            health = 100;
-                        }
-                        else {
-                            timer = 1;
-                            health += 2; //adds two points to players health after every 1 second
-                        }
-                    }
-                }
-               // Debug.Log(timer);
-               // Debug.Log(health);
+        if (health <= 0 && newhealth <= 0)
+        {
+            Debug.Log("death");
+
+        }
+    }
+
+    void healthGen(){
+        if (health < 100 && health > 0){ //if player is still alive but not at max health
+            if (isHit == true){ //if player gets hit, resets timer countdowon for regeneration of health
+                timer = 10;
+                isHit = false;
             }
+            else {
+                if (timer >= 0){
+                    timer -= Time.deltaTime; //counts down from whatever timer is set at
+                }
+                else{
+                    if (health + 2 > 100){ //if health goes over max, player has max health
+                        health = 100;
+                    }
+                    else {
+                        timer = 1;
+                        health += 2; //adds two points to players health after every 1 second
+                    }
+                }
+            }
+            // Debug.Log(timer);
+            // Debug.Log(health);
+        }
             
-        }
-
-    
-
-        
-
-        
+    }
 }

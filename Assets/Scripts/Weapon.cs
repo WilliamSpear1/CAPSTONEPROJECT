@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject sparkBulletPrefab;
 
+
     // Update is called once per frame
     void Update()
     {
@@ -22,3 +23,4 @@ public class Weapon : MonoBehaviour
         Destroy(bullet, 1);
     }
 }
+   
