@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150059867}
   - component: {fileID: 150059868}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +971,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011170059, y: -0.014161602}
+  m_Offset: {x: -0.018049777, y: -0.036860317}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -982,7 +982,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20915729, y: 0.30608013}
+  m_Size: {x: 0.15071738, y: 0.21528512}
   m_EdgeRadius: 0
 --- !u!1 &602112938
 GameObject:
@@ -1934,63 +1934,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1389199095
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3793092225223453955, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_Name
-      value: HellBeast Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.028043352
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.581
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.4983015
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
 --- !u!1 &1441018172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,6 +2281,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1818917979
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3793092225223453955, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_Name
+      value: HellBeast Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.028043352
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.581
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.4983015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3793092225223454076, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f14c97d3033d9db46aa0633de5e5a659, type: 3}
 --- !u!1 &1939576685
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,7 +81,7 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
     public void Shoot() {
             GameObject go = Instantiate(fireBreathPrefab, mouth.position, Quaternion.identity);
             Vector3 direction = new Vector3(transform.localScale.x, 0);
-            go.GetComponent<FireBall>().Setup(direction);
+            go.GetComponent<FireBreath>().Setup(direction);
             Destroy(go, 1);
     }
 

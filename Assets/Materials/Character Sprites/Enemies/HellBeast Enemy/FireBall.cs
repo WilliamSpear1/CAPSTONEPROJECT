@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    public float speed = -1.8f;
-    private  Vector2 direction;
+    public float speed = 1.8f;
+    private Vector2 direction;
     public Rigidbody2D rb;
 
     private Transform target;
 
     [SerializeField]
     private string TargetTag;
+
     public void Start()
     {
-        if (GetComponent<SpriteRenderer>().flipX) { 
+        if (GetComponent<SpriteRenderer>().flipX)
+        {
             speed *= 1;
 
         }
-        else if (!GetComponent<SpriteRenderer>().flipX) {
+        else if (!GetComponent<SpriteRenderer>().flipX)
+        {
             speed *= -1;
         }
         rb.velocity = transform.right * speed;
-    
+
     }
 
-    public void Setup(Vector2 direction) {
+    public void Setup(Vector2 direction)
+    {
         this.direction = direction;
         GetComponent<SpriteRenderer>().flipX = direction.x == 1 ? false : true;
     }
@@ -34,7 +38,7 @@ public class FireBall : MonoBehaviour
         if (collision.tag == TargetTag)
         {
             collision.GetComponentInParent<IHit>().TakeHit();
+            Destroy(gameObject);
         }
     }
-
 }

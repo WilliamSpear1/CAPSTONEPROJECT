@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 425700476640157955}
   - component: {fileID: 425700476640157952}
   - component: {fileID: 425700476640157953}
-  - component: {fileID: 425700476640157958}
-  m_Layer: 9
+  - component: {fileID: 6685007415287816335}
+  m_Layer: 8
   m_Name: FireBreath
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &425700476640157958
+--- !u!114 &6685007415287816335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

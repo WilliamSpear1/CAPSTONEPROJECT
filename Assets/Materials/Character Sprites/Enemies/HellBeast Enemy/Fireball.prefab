@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2949137378239885117}
   - component: {fileID: 3535606991965086914}
   - component: {fileID: 7376864602774835700}
-  - component: {fileID: 4576441372594050300}
-  m_Layer: 9
+  - component: {fileID: -9208035248951256421}
+  m_Layer: 8
   m_Name: Fireball
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4576441372594050300
+--- !u!114 &-9208035248951256421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,9 +161,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7049075154864944678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2aadab3c6d0986e43b1449e481f8d9c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 288f732531340ae44b5afb2e6a4a5e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.69
+  speed: 2.15
   rb: {fileID: 2949137378239885117}
   TargetTag: Hero
