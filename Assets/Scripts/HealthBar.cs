@@ -21,7 +21,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bar.value = healthB.GetComponent<Megabot>().health;
+        bar.value = healthB.GetComponent<Megabot>().newhealth;
         
     }
 
