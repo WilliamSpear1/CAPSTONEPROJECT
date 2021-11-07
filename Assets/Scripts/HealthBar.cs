@@ -17,7 +17,7 @@ public class HealthBar : MonoBehaviour
       bar.value = 100;
       //Debug.Log(this.transform.parent.name);
     }
-
+    //
     // Update is called once per frame
     void Update()
     {
