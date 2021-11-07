@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 150059867}
   - component: {fileID: 150059868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595247028}
   - component: {fileID: 595247029}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: DamageArea
   m_TagString: Hero
   m_Icon: {fileID: 0}
@@ -1551,11 +1551,12 @@ GameObject:
   - component: {fileID: 1298831243}
   - component: {fileID: 1298831242}
   - component: {fileID: 1298831245}
-  - component: {fileID: 1298831246}
   - component: {fileID: 1298831247}
   - component: {fileID: 1298831241}
+  - component: {fileID: 1298831246}
   - component: {fileID: 1298831248}
-  m_Layer: 0
+  - component: {fileID: 1298831249}
+  m_Layer: 6
   m_Name: Megabot
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1697,7 +1698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bcec095547b8894db91b4c041254a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  hitFlag: 0
 --- !u!61 &1298831247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1738,6 +1739,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 150059867}
   sparkBulletPrefab: {fileID: 4303499850157520505, guid: 964fec64f6d77b84da1e943c4ea22130, type: 3}
+--- !u!114 &1298831249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298831240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2340d3195ea5f8c4896b9e70791da2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1301802474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2199,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1581548606
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7360468045719897990, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.16465081
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.543
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4875786
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236721, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236726, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_Name
+      value: Flying Demon Breathes Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046301236726, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046637959211, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046868770257, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360468046954733119, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 42b5b70dc07ff6b4aab05a0568a00a46, type: 3}
 --- !u!1 &1683982749
 GameObject:
   m_ObjectHideFlags: 0

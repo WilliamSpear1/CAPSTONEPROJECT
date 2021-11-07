@@ -55,6 +55,7 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
             }
         }
     }
+
     private void Attack() {
         if (!canAttack) {
             timeSinceLastAttack += Time.deltaTime;
@@ -72,6 +73,7 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
             animator.SetBool("Attack", true);
         }
     }
+
     public void StopShooting() {
         animator.SetBool("Attack", false);
     }
@@ -90,6 +92,7 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
             transform.localScale = scale; 
         }
     }
+
     public void CollisionEnter(string colliderName, GameObject other)
     {
         if (colliderName == "Sight" && other.tag == "Player") {
