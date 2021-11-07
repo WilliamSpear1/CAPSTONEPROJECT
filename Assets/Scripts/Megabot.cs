@@ -129,6 +129,7 @@ public class Megabot : MonoBehaviour,IHit
         if (health > 0)
         {
             health -= 10;
+            newhealth -= 10;
         }
         
         if(health <= 0)
@@ -151,10 +152,12 @@ public class Megabot : MonoBehaviour,IHit
                 else{
                     if (health + 2 > 100){ //if health goes over max, player has max health
                         health = 100;
+                        newhealth = 100;
                     }
                     else {
                         timer = 1;
-                        health += 2; //adds two points to players health after every 1 second
+                        health += 2;
+                        newhealth += 2; //adds two points to players health after every 1 second
                     }
                 }
             }
