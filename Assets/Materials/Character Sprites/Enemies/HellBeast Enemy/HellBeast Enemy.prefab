@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3793092225223454078}
   - component: {fileID: 3793092225223453953}
   - component: {fileID: 3793092225223453952}
+  - component: {fileID: 4966395391271687607}
   m_Layer: 0
   m_Name: HellBeast Enemy
   m_TagString: Untagged
@@ -157,7 +158,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &3793092225223453952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +177,51 @@ MonoBehaviour:
   coolDown: 0
   rb: {fileID: 3793092225223453953}
   speed: 0.17
+--- !u!60 &4966395391271687607
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793092225223453955}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36666667, y: 0.44666666}
+    newSize: {x: 0.36666667, y: 0.44666666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.17, y: -0.13666667}
+      - {x: 0.17, y: -0.09666667}
+      - {x: 0.123333335, y: 0.016666668}
+      - {x: 0.023333333, y: 0.10333334}
+      - {x: 0.05666667, y: 0.13000001}
+      - {x: 0.05666667, y: 0.14333333}
+      - {x: 0.03666667, y: 0.19}
+      - {x: -0.0033333334, y: 0.19}
+      - {x: -0.13000001, y: 0.15}
+      - {x: -0.11, y: 0.06333333}
+      - {x: -0.14333333, y: 0.01}
+      - {x: -0.15, y: -0.043333333}
+      - {x: -0.15, y: -0.07666667}
+      - {x: -0.09, y: -0.11666667}
+      - {x: -0.10333334, y: -0.20333333}
+      - {x: -0.09666667, y: -0.22333334}
+      - {x: -0.01, y: -0.22333334}
+      - {x: 0.023333333, y: -0.19666667}
+      - {x: 0.05, y: -0.22333334}
+      - {x: 0.15, y: -0.22333334}
 --- !u!1 &3793092225304701202
 GameObject:
   m_ObjectHideFlags: 0

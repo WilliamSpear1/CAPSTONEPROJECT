@@ -164,6 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aadab3c6d0986e43b1449e481f8d9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.57
+  speed: 0.69
   rb: {fileID: 2949137378239885117}
   TargetTag: Hero

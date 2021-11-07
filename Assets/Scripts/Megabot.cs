@@ -19,6 +19,7 @@ public class Megabot : MonoBehaviour,IHit
 
     [SerializeField]
     public static int health = 100;
+    public  int newhealth = 100;
 
     // Start is called before the first frame update
     void Start()
