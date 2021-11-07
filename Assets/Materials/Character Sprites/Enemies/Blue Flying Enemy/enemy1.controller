@@ -11,7 +11,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 2181285568184947628}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 200, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6701383446190189377}
     m_Position: {x: 390, y: 220, z: 0}
@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isHit
+    m_ConditionEvent: isDeath
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6701383446190189377}
@@ -59,7 +59,13 @@ AnimatorController:
   m_Name: enemy1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: isHit
+  - m_Name: isDeath
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isNear
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
