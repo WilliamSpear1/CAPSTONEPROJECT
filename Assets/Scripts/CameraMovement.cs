@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     //private Vector3 playerPosition;
     Transform CamTransform;
     public Transform Player;
-    float followspeed = 20f;
+    float followspeed = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 targetPosition = new Vector3(Player.position.x, CamTransform.position.y, CamTransform.position.z);
         CamTransform.position = Vector3.Lerp(CamTransform.position, targetPosition, Time.deltaTime * followspeed);
