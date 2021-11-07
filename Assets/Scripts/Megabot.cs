@@ -11,15 +11,14 @@ public class Megabot : MonoBehaviour,IHit
     bool facingRight = true;
     bool isHit = false;
     float timer = 10;
-    
+    Renderer rend;
+    Color c;
 
-    GameObject hbar;
+
     Vector3 localScale;
 
     [SerializeField]
-    public float health = 100;
-
-    public static int newhealth = 100;
+    public static int health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -126,14 +125,12 @@ public class Megabot : MonoBehaviour,IHit
     public void TakeHit()
     {
         Debug.Log("hit");
-        if (health > 0 && newhealth > 0)
+        if (health > 0)
         {
             health -= 10;
-            newhealth -= 10;
-
         }
-
-        if (health <= 0 && newhealth <= 0)
+        
+        if(health <= 0)
         {
             Debug.Log("death");
 
