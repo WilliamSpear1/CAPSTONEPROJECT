@@ -18,9 +18,11 @@ public class CameraMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-
-
+<<<<<<< HEAD
+    void LateUpdate()
+=======
     void FixedUpdate()
+>>>>>>> platforms
     {
         Vector3 targetPosition = new Vector3(Player.position.x, CamTransform.position.y, CamTransform.position.z);
         CamTransform.position = Vector3.Lerp(CamTransform.position, targetPosition, Time.deltaTime * followspeed);
