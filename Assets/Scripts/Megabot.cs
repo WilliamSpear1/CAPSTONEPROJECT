@@ -12,6 +12,8 @@ public class Megabot : MonoBehaviour
     public float health = 100;
     bool isHit = false;
     float timer = 10;
+    GameObject hBar;
+
 
     Vector3 localScale;
 
@@ -108,13 +110,16 @@ public class Megabot : MonoBehaviour
     }
 
        void OnTriggerEnter2D(Collider2D collider){
+           //Debug.Log(collider);
             if (collider.gameObject.name.Substring(0,17) == "Blue Flying Enemy"){ //checks the name of the object that hits the character
                    health -= 20;
                    isHit = true;
-                  // Debug.Log(health);
+                   
+                 //Debug.Log(health);
                 
        
             }
+          
         }
 
         void healthGen(){
@@ -142,6 +147,10 @@ public class Megabot : MonoBehaviour
             }
             
         }
+
+    
+
+        
 
         
 }
