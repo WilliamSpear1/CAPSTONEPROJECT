@@ -114,12 +114,12 @@ public class Megabot : MonoBehaviour
             if (collider.gameObject.name.Substring(0,17) == "Blue Flying Enemy"){ //checks the name of the object that hits the character
                    health -= 20;
                    isHit = true;
-                   //changeHealthBar(health);
+                   
                  //Debug.Log(health);
                 
        
             }
-           // changeHealthBar(health);
+          
         }
 
         void healthGen(){
@@ -148,17 +148,9 @@ public class Megabot : MonoBehaviour
             
         }
 
-     //   public void changeHealthBar(float h){
-          //Debug.Log(hBar);
-       //    hBar = GameObject.Find("BarFront");
-          // Debug.Log("in");
-         //  hBar.transform.localScale = new Vector3(h/100,1f);
+    
 
-        //}
-
-        public float getHealth(){
-            return health;
-        }
+        
 
         
 }
