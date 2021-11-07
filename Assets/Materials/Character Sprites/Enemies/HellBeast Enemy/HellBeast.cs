@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HellBeast : MonoBehaviour
+public class HellBeast : MonoBehaviour,ICollsionHandler,IHit
 {
-    /*[SerializeField]
+    [SerializeField]
     private Animator animator;
 
     [SerializeField]
@@ -27,7 +27,7 @@ public class HellBeast : MonoBehaviour
 
     private int health = 100;
 
-    private void //Update()
+    private void Update()
     {
         Attack();
         LookAtTarget();
@@ -83,7 +83,7 @@ public class HellBeast : MonoBehaviour
                 this.target = other.transform;
             }
         }
-        if (colliderName == "shotPos" && other.tag == "Player")
+        if (colliderName == "Fire" && other.tag == "Player")
         {
             Debug.Log("inside if statment");
             other.GetComponent<Megabot>().TakeHit();
@@ -105,6 +105,6 @@ public class HellBeast : MonoBehaviour
 
         if (health == 0)
             animator.SetBool("Dead", true);
-    }*/
+    }
 
 }

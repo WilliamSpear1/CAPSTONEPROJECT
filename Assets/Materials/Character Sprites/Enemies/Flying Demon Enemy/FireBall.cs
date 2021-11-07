@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    public float dieTime, damage,speed;
+    public float speed = -1.8f;
     private  Vector2 direction;
+    public Rigidbody2D rb;
 
     private Transform target;
 
     [SerializeField]
     private string TargetTag;
+    public void Start()
+    {
+        if (GetComponent<SpriteRenderer>().flipX) { 
+            speed *= 1;
+
+        }
+        else if (!GetComponent<SpriteRenderer>().flipX) {
+            speed *= -1;
+        }
+        rb.velocity = transform.right * speed;
+    
+    }
 
     public void Setup(Vector2 direction) {
         this.direction = direction;
