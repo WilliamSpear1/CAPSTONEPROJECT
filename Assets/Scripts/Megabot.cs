@@ -129,6 +129,7 @@ public class Megabot : MonoBehaviour,IHit
         if (health > 0)
         {
             health -= 10;
+            newhealth -= 10;
         }
         
         if(health <= 0)
@@ -155,6 +156,7 @@ public class Megabot : MonoBehaviour,IHit
                     else {
                         timer = 1;
                         health += 2; //adds two points to players health after every 1 second
+                        newhealth += 2;
                     }
                 }
             }
