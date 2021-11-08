@@ -129,6 +129,7 @@ public class Megabot : MonoBehaviour,IHit
         if (health > 0)
         {
             health -= 10;
+            newhealth -= 10;
         }
         
         if(health <= 0)
