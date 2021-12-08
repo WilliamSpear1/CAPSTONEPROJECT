@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3793092225223453953}
   - component: {fileID: 3793092225223453952}
   - component: {fileID: 4966395391271687607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HellBeast Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   mouth: {fileID: 3793092224459122312}
   coolDown: 0
   rb: {fileID: 3793092225223453953}
-  speed: 0.17
+  speed: 0.05
 --- !u!60 &4966395391271687607
 PolygonCollider2D:
   m_ObjectHideFlags: 0

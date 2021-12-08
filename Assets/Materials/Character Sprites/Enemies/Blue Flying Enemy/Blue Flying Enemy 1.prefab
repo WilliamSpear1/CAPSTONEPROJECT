@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 406335277009257762}
   m_Layer: 0
   m_Name: Blue Flying Enemy 1
-  m_TagString: Untagged
+  m_TagString: allEnemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Megabot : MonoBehaviour,IHit
 {
@@ -13,9 +14,11 @@ public class Megabot : MonoBehaviour,IHit
     float timer = 10;
     Renderer rend;
     Color c;
+  
 
 
     Vector3 localScale;
+    Vector3 startPos;
 
     [SerializeField]
     public static int health = 100;
@@ -27,6 +30,12 @@ public class Megabot : MonoBehaviour,IHit
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         localScale = transform.localScale;
+        startPos = transform.position;
+        //getGameObjects();
+        health = 100;
+        newhealth = 100;
+        //mega = GameObject.Find("Megabot");
+       // Debug.Log(mega);
     }
 
     // Update is called once per frame
@@ -42,6 +51,8 @@ public class Megabot : MonoBehaviour,IHit
 
         healthGen();
     }
+
+
 
     void FixedUpdate()
     {
@@ -126,23 +137,54 @@ public class Megabot : MonoBehaviour,IHit
     public void TakeHit()
     {
         Debug.Log("hit");
-        if (health > 0)
+        if (health > 0 || newhealth > 0)
         {
             health -= 10;
             newhealth -= 10;
         }
         
-        if(health <= 0)
+       /* if(health <= 0)
         {
             Debug.Log("death");
 
+        }*/
+
+        die();
+    }
+
+    void die(){
+        if ( newhealth <= 0){
+           // health = 100;
+           //newhealth = 100;
+          // if (timer >= 0){
+          //          timer -= Time.deltaTime; //counts down from whatever timer is set at
+           // }
+           
+           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+           transform.position = startPos;
+           health = 100;
+           newhealth = 100;
+           Debug.Log("DEAD");
+         
         }
     }
+
+    //used to save all enemies in hierarchy
+    //void getGameObjects(){
+      //  enemy = GameObject.FindGameObjectsWithTag("allEnemies");
+        //enemyDelete = GameObject.FindGameObjectsWithTag("allEnemies");
+      //  Debug.Log(enemy.Length);
+      //  for (int i = 0; i < enemy.Length; i++){
+       //     Debug.Log(enemy[i]);
+      //  }
+        //hellBeast = GameObject.FindGameObjectsWithTag("HellBeast");
+        //flyingDemon = GameObject.FindGameObjectsWithTag("Flying Demon");
+    //}
 
     void healthGen(){
         if (health < 100 && health > 0){ //if player is still alive but not at max health
             if (isHit == true){ //if player gets hit, resets timer countdowon for regeneration of health
-                timer = 10;
+                timer = 15;
                 isHit = false;
             }
             else {

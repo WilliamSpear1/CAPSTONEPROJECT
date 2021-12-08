@@ -76,6 +76,7 @@ public class HellBeast : MonoBehaviour,ICollsionHandler,IHit
     }
     public void CollisionEnter(string colliderName, GameObject other)
     {
+        Debug.Log(other.tag);
         if (colliderName == "BattleArea" && other.tag == "Player")
         {
             if (target == null)
