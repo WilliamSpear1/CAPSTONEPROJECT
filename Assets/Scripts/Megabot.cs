@@ -139,8 +139,8 @@ public class Megabot : MonoBehaviour,IHit
         Debug.Log("hit");
         if (health > 0 || newhealth > 0)
         {
-            health -= 10;
-            newhealth -= 10;
+            health -= 25;
+            newhealth -= 25;
         }
         
        /* if(health <= 0)
