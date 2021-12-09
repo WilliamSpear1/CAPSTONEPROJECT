@@ -156,30 +156,20 @@ public class Megabot : MonoBehaviour,IHit
         if ( newhealth <= 0){
            // health = 100;
            //newhealth = 100;
-          // if (timer >= 0){
-          //          timer -= Time.deltaTime; //counts down from whatever timer is set at
-           // }
+          // GameObject.Find("Megabot").SetActive(false);
+       
+
            
            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
            transform.position = startPos;
            health = 100;
            newhealth = 100;
-           Debug.Log("DEAD");
+           //Debug.Log("DEAD");
          
         }
     }
 
-    //used to save all enemies in hierarchy
-    //void getGameObjects(){
-      //  enemy = GameObject.FindGameObjectsWithTag("allEnemies");
-        //enemyDelete = GameObject.FindGameObjectsWithTag("allEnemies");
-      //  Debug.Log(enemy.Length);
-      //  for (int i = 0; i < enemy.Length; i++){
-       //     Debug.Log(enemy[i]);
-      //  }
-        //hellBeast = GameObject.FindGameObjectsWithTag("HellBeast");
-        //flyingDemon = GameObject.FindGameObjectsWithTag("Flying Demon");
-    //}
+ 
 
     void healthGen(){
         if (health < 100 && health > 0){ //if player is still alive but not at max health
