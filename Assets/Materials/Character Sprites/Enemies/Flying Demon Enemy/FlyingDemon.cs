@@ -32,6 +32,8 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
     private int index;
     private int health = 100;
 
+    private Weapon weapon;
+
     private void Update()
     {
         Attack();
@@ -101,7 +103,6 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
             }
         }
         if (colliderName == "Fire" && other.tag == "Player") {
-            Debug.Log("inside if statment");
             other.GetComponent<Megabot>().TakeHit();
         }
     }
@@ -116,8 +117,7 @@ public class FlyingDemon : MonoBehaviour,ICollsionHandler,IHit
 
     public void TakeHit()
     {
-            health -= 50;
-
+        health -= 50;
 
         if (health == 0)
             animator.SetBool("Dead", true);
