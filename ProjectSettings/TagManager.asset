@@ -13,6 +13,8 @@ TagManager:
   - Undefined
   - Blue Flying
   - allEnemies
+  - ChargedPickup
+  - CrossPickup
   layers:
   - Default
   - TransparentFX
