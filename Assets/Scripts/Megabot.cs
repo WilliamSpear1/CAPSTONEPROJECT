@@ -52,8 +52,6 @@ public class Megabot : MonoBehaviour,IHit
         healthGen();
     }
 
-
-
     void FixedUpdate()
     {
         rb.velocity = new Vector2(dirX, rb.velocity.y);    
@@ -61,7 +59,7 @@ public class Megabot : MonoBehaviour,IHit
 
     void LateUpdate()
     {
-        if(dirX > 0 && !facingRight) //If input is right, but character is facing left, flip.
+        if (dirX > 0 && !facingRight) //If input is right, but character is facing left, flip.
         { 
            Flip();
         }
